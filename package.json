@@ -18,5 +18,23 @@
   "bugs": {
     "url": "https://github.com/smarthutza/CareBnB/issues"
   },
-  "homepage": "https://github.com/smarthutza/CareBnB#readme"
+  "homepage": "https://github.com/smarthutza/CareBnB#readme",
+  "devDependencies": {
+    "codecov": "^2.1.0",
+    "env2": "^2.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "istanbul": "^0.4.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.8",
+    "hapi": "^16.1.1",
+    "hapi-auth-cookie": "^7.0.0",
+    "inert": "^4.2.0",
+    "pg": "^6.1.5",
+    "vision": "^4.1.1"
+  }
 }
