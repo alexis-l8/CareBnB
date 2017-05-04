@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+
 }
 
 .header {
@@ -53,10 +54,26 @@ html, body {
   border: 2px solid black;
   border-radius: 2rem;
   max-width: 30%;
+  text-decoration: none;
+  color: black;
 }
 
 .article__housingoptions:hover{
   transform: scale(1.1);
-  background-color:rgba(255, 64, 0, 0.7); 
+  background-color:rgba(255, 64, 0, 0.7);
   transition: 0.5s ease-in-out;
+}
+
+.section__homevideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.home__video{
+  border: 2px solid rgba(255, 64, 0, 0.7);
+  width: 80%;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
 }
