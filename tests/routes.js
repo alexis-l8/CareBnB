@@ -12,17 +12,3 @@ test('Home Route', (t) => {
   });
 });
 
-// test('returns plugin error', (t) => {
-//   const test = (srv, options, next) => next(new Error('from plugin'));
-//
-//   test.attributes = {
-//     name: 'test',
-//   };
-//
-//   server.register('dad', (err) => {
-//     server.initialize((err) => {
-//       t.ok(err);
-//       t.end();
-//     });
-//   });
-// });
