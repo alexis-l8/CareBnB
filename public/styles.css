@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.header__heading{
+  padding: 1rem;
+}
+
+.header__account{
+  display: flex;
+}
+
+.account__action{
+  padding: 1rem;
+}
