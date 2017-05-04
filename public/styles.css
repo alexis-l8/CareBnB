@@ -23,3 +23,11 @@ html, body {
 .account__action{
   padding: 1rem;
 }
+
+.section__information{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
