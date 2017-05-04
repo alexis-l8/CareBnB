@@ -1,7 +1,7 @@
 module.exports = {
   method: 'GET',
-  path: '/seeker1',
+  path: '/seeker_step2',
   handler: (request, reply) => {
-    reply.view('seeker_questionnaire');
+    reply.view('seeker_questionnaire2');
   },
 };

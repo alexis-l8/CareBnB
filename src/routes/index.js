@@ -1,5 +1,6 @@
 module.exports = [
   require('./home'),
   require('./static'),
-  require('./seeker_questionnaire'),
+  require('./seeker_step1'),
+  require('./seeker_step2'),
 ];

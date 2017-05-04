@@ -114,6 +114,7 @@ html, body {
 .questionnaire__article{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 50px;
 }
 
@@ -133,4 +134,13 @@ html, body {
   padding: 0.5rem;
   color: white;
   background-color: rgb(75, 75, 75)
+}
+
+.questionnaire__input{
+  font-size: 2rem;
+  width: 5em;
+  margin-left: 1rem;
+  vertical-align:middle;
+  background-color: rgba(255, 64, 0, 0.8);
+  color: white;
 }
