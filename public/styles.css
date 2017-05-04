@@ -137,9 +137,10 @@ html, body {
 }
 
 .questionnaire__input{
-  font-size: 2rem;
-  width: 5em;
-  margin-left: 1rem;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  width: 4em;
+  margin: 1rem;
   vertical-align:middle;
   background-color: rgba(255, 64, 0, 0.8);
   color: white;
