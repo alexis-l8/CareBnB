@@ -31,3 +31,32 @@ html, body {
   font-size: 1.8rem;
   font-weight: 600;
 }
+
+.section__housingoptions{
+  margin-top: 8em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.housingoptions__title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.housingoptions__text{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.article__housingoptions{
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 2rem;
+  max-width: 30%;
+}
+
+.article__housingoptions:hover{
+  transform: scale(1.1);
+  background-color:rgba(255, 64, 0, 0.7); 
+  transition: 0.5s ease-in-out;
+}
