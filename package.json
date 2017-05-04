@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "node tests/tests.js | tap-spec",
-    "coverage": "istanbul cover tests/tests.js"
+    "coverage": "istanbul cover tests/tests.js",
+    "start": "node src/start.js",
+    "dev": "nodemon src/start.js -e 'js, html, css, hbs'"
   },
   "repository": {
     "type": "git",
