@@ -15,10 +15,12 @@ html, body {
 
 .header__heading{
   padding: 1rem;
+  color: rgb(50, 50, 50);
 }
 
 .header__account{
   display: flex;
+  color: black;
 }
 
 .account__action{
@@ -58,7 +60,7 @@ html, body {
   color: black;
 }
 
-.article__housingoptions:hover{
+.article__housingoptions:hover, .article__housingoptions:focus{
   transform: scale(1.1);
   background-color:rgba(255, 64, 0, 0.7);
   transition: 0.5s ease-in-out;
@@ -76,4 +78,70 @@ html, body {
   width: 80%;
   border-radius: 2rem;
   margin-bottom: 2rem;
+}
+
+.section__questionnaire{
+  color: rgba(255, 64, 0, 1);
+  /*font-size: 1.5rem;*/
+}
+
+.questionnaire__form{
+  color: rgb(50, 50, 50);
+  margin-left: 5rem;
+
+
+}
+
+.questionnaire__section{
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+.questionnaire__current{
+  font-size: 50px;
+  color: white;
+  border: 1px solid rgba(255, 64, 0, 1);
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 64, 0, 0.8);
+}
+
+.questionnaire__total {
+  font-size: 30px;
+  padding-top: 0.7rem;
+}
+
+.questionnaire__article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.questionnaire_select{
+ font-size: 2.5rem;
+ color: white;
+ background-color: rgba(255, 64, 0, 0.8);
+ margin: 1rem;
+ padding: 0.5rem;
+}
+
+
+.questionnaire__button{
+  margin-top: 2rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(75, 75, 75)
+}
+
+.questionnaire__input{
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  width: 4em;
+  margin: 1rem;
+  vertical-align:middle;
+  background-color: rgba(255, 64, 0, 0.8);
+  color: white;
 }
