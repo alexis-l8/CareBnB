@@ -19,7 +19,6 @@ function initMap(err, res) {
   var userLatitude= res.result.latitude;
   var userLongitude = res.result.longitude;
 
-
   var locations = [
     ['Barbara B.', 51.532131, -0.038538, 1],
     ['Marjorie S.', 51.530649, -0.038366, 2],
@@ -52,10 +51,28 @@ function initMap(err, res) {
   }
 }
 
+function waterfall (arg, tasks, cb) {
+
+  var waterfallcb = function (error, res) {
+    if (error) { return cb(error); }
+    n += 1;
+    if (n === tasks.length) {
+      tasks[n - 1](res, cb);
+    } else {
+      tasks[n - 1](res, waterfallcb);
+    }
+  };
+
+  var n = 0;
+  waterfallcb(null, arg);
+};
+
+
 
 function createMap() {
   var params = (new URLSearchParams(location.search.slice(1)));
   var postcode = params.get('postcode').replace(' ', '%20');
 
   fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
+  fetch('/getUsers', console.log)
 }
