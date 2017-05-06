@@ -1,5 +1,6 @@
 const test = require('tape');
 const add = require('../src/helpers/helper_functions.js');
+require('./routes');
 
 test('Check if Tape is working', (t) => {
   t.pass('test 1 passes');
