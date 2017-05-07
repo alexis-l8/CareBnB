@@ -13,14 +13,15 @@ html, body {
 
 #map {
         height: 90%;
-        width: 100%;
+        width: 50%;
+        float: right;
        }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 10%;
 }
 
 .header__heading{
