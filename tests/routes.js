@@ -33,3 +33,25 @@ test('homeseeker step2 route', (t) => {
     t.end();
   });
 });
+
+test('results route', (t) => {
+  const options = {
+    url: '/results',
+    method: 'GET',
+  };
+  server.inject(options, (res) => {
+    t.equal(res.statusCode, 200, 'statuscode should return 200');
+    t.end();
+  });
+});
+
+test('getUsers route', (t) => {
+  const options = {
+    url: '/getUsers',
+    method: 'GET',
+  };
+  server.inject(options, (res) => {
+    t.equal(res.statusCode, 200, 'statuscode should return 200');
+    t.end();
+  });
+});
