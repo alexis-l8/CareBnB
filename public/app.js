@@ -16,63 +16,49 @@ var fetch = function(url, cb) {
 
 function initMap(err, res) {
   if (err) throw err;
-  var userLatitude= res.result.latitude;
-  var userLongitude = res.result.longitude;
+  var userLat= res.result.latitude;
+  var userLng = res.result.longitude;
+  var mapOptions = {
+    zoom: 13,
+    center: {
+      lat: userLat,
+      lng: userLng,
+    },
+  }
+  var mapDiv = document.getElementById('map');
+  var map = new google.maps.Map(mapDiv, mapOptions);
 
-  var locations = [
-    ['Barbara B.', 51.532131, -0.038538, 1],
-    ['Marjorie S.', 51.530649, -0.038366, 2],
-    ['Harry D.', 51.529501, -0.038152, 3],
-    ['Alistair M.', 51.528086, -0.038066, 4],
-  ];
+  fetch('/getUsers', createMarkers.bind(this, map));
+}
 
-  // CREATES BASIC GOOGLE MAP
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: new google.maps.LatLng(userLatitude, userLongitude),
-  });
+function createMarkers(map, err, res){
+  if(err) return new Error('No users');
+  var locations = res.map(function(homeOwner){return [homeOwner.name, homeOwner.latitude, homeOwner.longitude]});
+  var marker, i;
 
   // ? WINDOW INFORMATION OBJECT
   var infowindow = new google.maps.InfoWindow();
 
-  var marker, i;
-
-  for (i = 0; i < locations.length; i++) {
+  locations.forEach(function(homeOwner){
     marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      position: new google.maps.LatLng(homeOwner[1], homeOwner[2]),
       animation: google.maps.Animation.DROP,
       map,
     });
-
-    google.maps.event.addListener(marker, 'click', ((marker, i) => () => {
-      infowindow.setContent(locations[i][0]);
+    google.maps.event.addListener(marker, 'click', function () {
+      infowindow.setContent(homeOwner[0]);
       infowindow.open(map, marker);
-    })(marker, i));
-  }
-}
-
-function waterfall (arg, tasks, cb) {
-
-  var waterfallcb = function (error, res) {
-    if (error) { return cb(error); }
-    n += 1;
-    if (n === tasks.length) {
-      tasks[n - 1](res, cb);
-    } else {
-      tasks[n - 1](res, waterfallcb);
-    }
-  };
-
-  var n = 0;
-  waterfallcb(null, arg);
+    });
+  });
 };
 
+function addMarkerListener (marker, infowindow) {
+
+}
 
 
 function createMap() {
   var params = (new URLSearchParams(location.search.slice(1)));
   var postcode = params.get('postcode').replace(' ', '%20');
-
   fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
-  fetch('/getUsers', console.log)
 }
