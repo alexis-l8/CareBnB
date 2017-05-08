@@ -45,23 +45,25 @@ function createMarkers(map, err, res){
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(homeOwner[1], homeOwner[2]),
       animation: google.maps.Animation.DROP,
+      icon:'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
       map,
     });
-    document.getElementById('map_results').children[index].addEventListener('mouseover', (function(marker){
-      return function(){
-        infowindow.setContent('<section class="googlemarker__content"><span>'+homeOwner[0]+'</span><img src="./assets/'+homeOwner[0]+'_ico.jpg"/></section>');
-        infowindow.open(map, marker);
-      }
-    })(marker));
+    document.getElementById('map_results').children[index].addEventListener('mouseover', function(marker){
+      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/orange-dot.png');
+
+      }.bind(this, marker));
+      document.getElementById('map_results').children[index].addEventListener('mouseout', function(marker){
+        marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+
+        }.bind(this, marker));
 
     google.maps.event.addListener(marker, 'click', (function (marker) {
-
-      return function(){
-      infowindow.setContent('<section class="googlemarker__content"><span>'+homeOwner[0]+'</span><img src="./assets/'+homeOwner[0]+'_ico.jpg"/></section>');
+      infowindow.setContent('<section class="detailedresults-images markercontent"><button class="detailedresults-images__button" onclick="plusDivs(-1)">&#10094;</button><img class="detailedresults-images__image" src="./assets/fuggerei.jpg"/><img class="detailedresults-images__image" src="./assets/inside-the-hotel-property.jpg"/><img class="detailedresults-images__image" src="./assets/living-room-inside-property.jpg"/><button class="detailedresults-images__button" onclick="plusDivs(+1)">&#10095;</button></section>');
       infowindow.open(map, marker);
+      showDivs(slideIndex);
 
-  }
-    })(marker));
+
+    }.bind(this, marker)));
     google.maps.event.addListener(marker, 'mouseover', function(event) {
      });
 
