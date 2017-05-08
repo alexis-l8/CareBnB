@@ -18,6 +18,7 @@ function initMap(err, res) {
   if (err) throw err;
   var userLat= res.result.latitude;
   var userLng = res.result.longitude;
+  var userCenter = {lat: userLat, lng: userLng};
   var mapOptions = {
     zoom: 13,
     center: {
@@ -27,6 +28,7 @@ function initMap(err, res) {
   }
   var mapDiv = document.getElementById('map');
   var map = new google.maps.Map(mapDiv, mapOptions);
+  addMarker(userCenter, map, './assets/Icons8-Windows-8-Maps-Center-Direction.ico');
 
   fetch('/getUsers', createMarkers.bind(this, map));
 }
@@ -51,7 +53,7 @@ function createMarkers(map, err, res){
         infowindow.open(map, marker);
       }
     })(marker));
-    
+
     google.maps.event.addListener(marker, 'click', (function (marker) {
 
       return function(){
@@ -66,8 +68,13 @@ function createMarkers(map, err, res){
   });
 };
 
-function addMarkerListener (marker, infowindow) {
-
+function addMarker (location, map, icon) {
+  icon = icon || null;
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    icon: icon,
+  });
 }
 
 
