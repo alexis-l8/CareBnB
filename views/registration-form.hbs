@@ -6,17 +6,17 @@
 
 <div class="container" >
   <h2>Create a new account</h2>
-  <form class="form" action="/thankyou">
+  <form class="form" method="post" action="/thankyou">
 
     <fieldset class="form-fieldset__first-name">
-      <input type="text" id="first-name" />
+      <input type="text" name="first-name" />
       <label for="First Name">
         <span>FIRST NAME</span>
       </label>
     </fieldset>
 
     <fieldset class="form-fieldset__surname">
-      <input type="text" id="surname" />
+      <input type="text" name="surname" />
       <label for="Surname">
         <span>SURNAME</span>
       </label>
@@ -24,7 +24,7 @@
 
     <fieldset class="form-fieldse__gender">
         <label for="Gender">
-        <select class="gender_select">
+        <select class="gender_select" name="gender">
           <option value="" disabled selected>Select</option>
           <option value="female">female</option>
           <option value="male">male</option>
@@ -34,28 +34,28 @@
     </fieldset>
 
     <fieldset class="form-fieldset__dob">
-      <input type="date" id="dob" />
+      <input type="date" name="dob" />
       <label for="Date of Birth">
         <span> DATE OF BIRTH</span>
       </label>
     </fieldset>
 
     <fieldset class="form-fieldset__hours-available">
-      <input type="text" id="hours-available" />
+      <input type="text" name="hours-available" />
       <label for="Hours Available">
         <span>HOURS AVAILABLE</span>
       </label>
     </fieldset>
 
     <fieldset class="form-fieldset__occupation">
-      <input type="text" id="occupation" />
+      <input type="text" name="occupation" />
       <label for="Occupation">
         <span>OCCUPATION</span>
       </label>
     </fieldset>
 
     <fieldset class="form-fieldset__children">
-      <input type="text" id="children" />
+      <input type="text" name="children" />
       <label for="Children">
         <span>CHILDREN</span>
       </label>
@@ -63,7 +63,7 @@
 
     <fieldset class="form-fieldse__smoker">
         <label for="Smoker">
-        <select class="smoker_select">
+        <select class="smoker_select" name="smoker">
           <option value="" disabled selected>Select</option>
           <option value="yes">yes</option>
           <option value="no">no</option>
@@ -73,21 +73,21 @@
     </fieldset>
 
     <fieldset class="form-fieldset__pets">
-      <input type="text" id="pets" />
+      <input type="text" name="pets" />
       <label for="Pets">
         <span>PETS</span>
       </label>
     </fieldset>
 
     <fieldset class="upload__ID">
-      <input id="upload-id" type="file" class="upload" />
+      <input name="upload-id" type="file" class="upload" />
       <label for="Upload your ID">
         <span>UPLOAD ID</span>
       </label>
   </fieldset>
 
     <fieldset class="upload__DBS">
-    <input id="upload-dbs" type="file" class="upload" />
+    <input name="upload-dbs" type="file" class="upload" />
     <label for="Upload your DBS">
       <span>UPLOAD DBS (if available)</span>
     </label>

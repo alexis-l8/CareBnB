@@ -7,4 +7,5 @@ module.exports = [
   require('./getUsers'),
   require('./detailedResults'),
   require('./registration'),
+  require('./thankyou'),
 ];
