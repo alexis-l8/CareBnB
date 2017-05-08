@@ -55,3 +55,14 @@ test('getUsers route', (t) => {
     t.end();
   });
 });
+
+test('detailedresults route', (t) => {
+  const options = {
+    url: '/detailedresults',
+    method: 'GET',
+  };
+  server.inject(options, (res) => {
+    t.equal(res.statusCode, 200, 'statuscode should return 200');
+    t.end();
+  });
+});

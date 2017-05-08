@@ -158,13 +158,13 @@ html, body {
 }
 
 .aside__results{
-  background: yellow;
   width: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  border-top: 1px solid rgba(255, 64, 0, 0.8);
 }
 
 .figure__homeowner{
@@ -174,12 +174,16 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  border: 1px solid rgba(255, 64, 0, 0.8);
+  border-radius: 1rem;
+  background-color: rgba(255, 64, 0, 0.6);
 
 }
 
 .homeowner__image{
   width: 100%;
   height: 200px;
+  border-radius: 1rem;
 }
 
 .googlemarker__content{
@@ -188,6 +192,24 @@ html, body {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+}
+
+.detailedresults-images.markercontent{
+  height: 200px;
+  width: 300px;
+}
+
+.detailedresults-images__image{
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.detailedresults-images__button{
+  background-color:rgba(255, 64, 0, 0.8);
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 2rem;
 }
 
 /*slider*/
