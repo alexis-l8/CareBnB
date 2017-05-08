@@ -3,4 +3,7 @@ module.exports = [
   require('./static'),
   require('./seeker_step1'),
   require('./seeker_step2'),
+  require('./results'),
+  require('./getUsers'),
+  require('./detailedResults'),
 ];

@@ -1,16 +1,27 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
-
 }
+
+#map {
+        height: 90%;
+        width: 50%;
+        float: right;
+       }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 10%;
 }
 
 .header__heading{
@@ -144,4 +155,79 @@ html, body {
   vertical-align:middle;
   background-color: rgba(255, 64, 0, 0.8);
   color: white;
+}
+
+.aside__results{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 64, 0, 0.8);
+}
+
+.figure__homeowner{
+  max-width: 20%;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid rgba(255, 64, 0, 0.8);
+  border-radius: 1rem;
+  background-color: rgba(255, 64, 0, 0.6);
+
+}
+
+.homeowner__image{
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+}
+
+.googlemarker__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.detailedresults-images.markercontent{
+  height: 200px;
+  width: 300px;
+}
+
+.detailedresults-images__image{
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.detailedresults-images__button{
+  background-color:rgba(255, 64, 0, 0.8);
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 2rem;
+}
+
+/*slider*/
+.detailedresults-images {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailedresults-text {
+  height: 75%;
+  width: 100%;
+  border: 3px black solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailedresults-text__article {
+  border: 1px green solid;
+  width: 33.33%;
 }
