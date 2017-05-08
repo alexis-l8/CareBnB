@@ -34,21 +34,35 @@ function initMap(err, res) {
 function createMarkers(map, err, res){
   if(err) return new Error('No users');
   var locations = res.map(function(homeOwner){return [homeOwner.name, homeOwner.latitude, homeOwner.longitude]});
-  var marker, i;
+  var marker;
 
   // ? WINDOW INFORMATION OBJECT
   var infowindow = new google.maps.InfoWindow();
 
-  locations.forEach(function(homeOwner){
+  locations.forEach(function(homeOwner, index){
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(homeOwner[1], homeOwner[2]),
       animation: google.maps.Animation.DROP,
       map,
     });
-    google.maps.event.addListener(marker, 'click', function () {
-      infowindow.setContent(homeOwner[0]);
+    document.getElementById('map_results').children[index].addEventListener('mouseover', (function(marker){
+      return function(){
+        infowindow.setContent('<section class="googlemarker__content"><span>'+homeOwner[0]+'</span><img src="./assets/'+homeOwner[0]+'_ico.jpg"/></section>');
+        infowindow.open(map, marker);
+      }
+    })(marker));
+    
+    google.maps.event.addListener(marker, 'click', (function (marker) {
+
+      return function(){
+      infowindow.setContent('<section class="googlemarker__content"><span>'+homeOwner[0]+'</span><img src="./assets/'+homeOwner[0]+'_ico.jpg"/></section>');
       infowindow.open(map, marker);
-    });
+
+  }
+    })(marker));
+    google.maps.event.addListener(marker, 'mouseover', function(event) {
+     });
+
   });
 };
 

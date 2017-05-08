@@ -1,6 +1,12 @@
-<aside>
+<aside id="map_results" class="aside__results">
   {{#each res}}
-  <img src=./src/assets/{{this.first_name}}.jpg>
-  <li>{{this.first_name}}</li>
+  <figure class="figure__homeowner">
+    <img class="homeowner__image" src=./assets/{{this.first_name}}.jpg>
+    <span>{{this.first_name}}, {{this.surname}}</span>
+    <span>Age: {{this.age}}</span>
+    <span>Gender: {{this.gender}}</span>
+    <span>Postcode: {{this.postcode}}</span>
+  </figure>
+
 {{/each}}
 </aside>
