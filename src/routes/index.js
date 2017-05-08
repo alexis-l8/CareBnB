@@ -5,5 +5,6 @@ module.exports = [
   require('./seeker_step2'),
   require('./results'),
   require('./getUsers'),
-  require('./detailedresults'),
+  require('./detailedResults'),
+  require('./registration'),
 ];

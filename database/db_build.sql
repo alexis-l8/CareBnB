@@ -50,12 +50,13 @@ CREATE TABLE HomeseekerProfile (
   id SERIAL PRIMARY KEY NOT NULL,
   first_name VARCHAR(30) NOT NULL,
   surname VARCHAR(30) NOT NULL,
-  age INTEGER NOT NULL,
   gender VARCHAR(10) NOT NULL,
-  pets VARCHAR(100) NOT NULL,
-  smoker BOOLEAN,
-  children INTEGER NOT NULL,
+  age INTEGER NOT NULL,
+  hours_available INTEGER NOT NULL, 
   occupation VARCHAR(30) NOT NULL
+  children INTEGER NOT NULL,
+  smoker BOOLEAN,
+  pets VARCHAR(100) NOT NULL
 );
 
 COMMIT;

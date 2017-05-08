@@ -16,6 +16,7 @@ var fetch = function(url, cb) {
 
 function initMap(err, res) {
   if (err) throw err;
+  console.log(res);
   var userLat= res.result.latitude;
   var userLng = res.result.longitude;
   var mapOptions = {
@@ -34,6 +35,7 @@ function initMap(err, res) {
 function createMarkers(map, err, res){
   if(err) return new Error('No users');
   var locations = res.map(function(homeOwner){return [homeOwner.name, homeOwner.latitude, homeOwner.longitude]});
+  console.log(res);
   var marker;
 
   // ? WINDOW INFORMATION OBJECT
@@ -51,7 +53,7 @@ function createMarkers(map, err, res){
         infowindow.open(map, marker);
       }
     })(marker));
-    
+
     google.maps.event.addListener(marker, 'click', (function (marker) {
 
       return function(){
@@ -72,7 +74,10 @@ function addMarkerListener (marker, infowindow) {
 
 
 function createMap() {
-  var params = (new URLSearchParams(location.search.slice(1)));
+  var params = new URLSearchParams(location.search.slice(1));
+  console.log(params);
+
   var postcode = params.get('postcode').replace(' ', '%20');
+      console.log(postcode);
   fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
 }
