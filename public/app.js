@@ -50,6 +50,7 @@ function createMarkers(map, err, res){
     });
     document.getElementById('map_results').children[index].addEventListener('mouseover', function(marker){
       marker.setIcon('http://maps.google.com/mapfiles/ms/icons/orange-dot.png');
+      map.panTo({lat:homeOwner[1], lng: homeOwner[2]});
 
       }.bind(this, marker));
       document.getElementById('map_results').children[index].addEventListener('mouseout', function(marker){
