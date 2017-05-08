@@ -156,3 +156,24 @@ html, body {
   background-color: rgba(255, 64, 0, 0.8);
   color: white;
 }
+
+
+/*slider*/
+.detailedresults-images {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailedresults-text {
+  height: 75%;
+  width: 100%;
+  border: 3px black solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailedresults-text__article {
+  border: 1px green solid;
+  width: 33.33%;
+}
