@@ -6,4 +6,6 @@ module.exports = [
   require('./results'),
   require('./getUsers'),
   require('./detailedResults'),
+  require('./fileUpload'),
+  require('./sign-s3'),
 ];
