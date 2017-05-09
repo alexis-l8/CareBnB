@@ -6,4 +6,6 @@ module.exports = [
   require('./results'),
   require('./getUsers'),
   require('./detailedResults'),
+  require('./signup'),
+  require('./facebooklogin'),
 ];
