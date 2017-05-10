@@ -10,8 +10,7 @@ module.exports = {
     const fileType = request.query['file-type'];
     const s3Params = {
       Bucket: S3_BUCKET,
-      Key: fileName,
-      Expires: 60,
+      Key: `${fileName}`,
       ContentType: fileType,
       ACL: 'public-read',
     };
