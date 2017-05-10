@@ -315,3 +315,13 @@ h2 {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
 }
+
+html {
+  font-family: 'lato';
+}
+
+.formspree__form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
