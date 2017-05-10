@@ -232,7 +232,57 @@ html, body {
   width: 33.33%;
 }
 
-.signup-options {
+/* Registration Form */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 16px 40px 16px;
+  text-align: center;
+}
+
+.form-footer {
+  margin-top: 1em;
+}
+
+span, select, .user-input {
+  display: flex;
+  justify-content:flex-start;
+  margin-top: 0.5em;
+}
+
+fieldset {
+border-width: medium;
+border-color: rgba(255, 64, 0, 0.6);
+border-radius: 3%;
+background-color: #f5f4dc;
+}
+
+.btn {
+  border: 0;
+  background-color: rgba(255, 64, 0, 0.8);
+  padding: 18px 30px 18px 30px;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
+}
+
+.btn:focus,.btn:active,
+.btn:hover {
+  background-color: #6EB1FF;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+}
+  .signup-options {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

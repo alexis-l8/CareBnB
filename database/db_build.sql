@@ -25,8 +25,6 @@ INSERT INTO HomeownerProfile(first_name, surname, age, gender, postcode, longitu
 ('Allen', 'Walsh', 70, 'male', 'E3 5BS', -0.038066, 51.528086, 'none', 'no', 3, 'Single');
 
 
-
-
 CREATE TABLE HomeownerPreferences (
   id SERIAL PRIMARY KEY NOT NULL,
   pets_allowed BOOLEAN NOT NULL,
@@ -50,12 +48,13 @@ CREATE TABLE HomeseekerProfile (
   id SERIAL PRIMARY KEY NOT NULL,
   first_name VARCHAR(30) NOT NULL,
   surname VARCHAR(30) NOT NULL,
-  age INTEGER NOT NULL,
   gender VARCHAR(10) NOT NULL,
-  pets VARCHAR(100) NOT NULL,
-  smoker BOOLEAN,
+  date_of_birth DATE NOT NULL,
+  hours_available INTEGER NOT NULL,
+  occupation VARCHAR(30) NOT NULL,
   children INTEGER NOT NULL,
-  occupation VARCHAR(30) NOT NULL
+  smoker BOOLEAN,
+  pets VARCHAR(100) NOT NULL
 );
 
 COMMIT;

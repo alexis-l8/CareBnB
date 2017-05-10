@@ -16,6 +16,7 @@ var fetch = function(url, cb) {
 
 function initMap(err, res) {
   if (err) throw err;
+  console.log(res);
   var userLat= res.result.latitude;
   var userLng = res.result.longitude;
   var userCenter = {lat: userLat, lng: userLng};
@@ -36,6 +37,7 @@ function initMap(err, res) {
 function createMarkers(map, err, res){
   if(err) return new Error('No users');
   var locations = res.map(function(homeOwner){return [homeOwner.name, homeOwner.latitude, homeOwner.longitude]});
+  console.log(res);
   var marker;
 
   // ? WINDOW INFORMATION OBJECT
@@ -48,6 +50,7 @@ function createMarkers(map, err, res){
       icon:'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
       map,
     });
+
     document.getElementById('map_results').children[index].addEventListener('mouseover', function(marker){
       marker.setIcon('http://maps.google.com/mapfiles/ms/icons/orange-dot.png');
       map.panTo({lat:homeOwner[1], lng: homeOwner[2]});
@@ -82,7 +85,10 @@ function addMarker (location, map, icon) {
 
 
 function createMap() {
-  var params = (new URLSearchParams(location.search.slice(1)));
+  var params = new URLSearchParams(location.search.slice(1));
+  console.log(params);
+
   var postcode = params.get('postcode').replace(' ', '%20');
+      console.log(postcode);
   fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
 }
