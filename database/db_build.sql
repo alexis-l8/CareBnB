@@ -23,6 +23,9 @@ INSERT INTO HomeownerProfile(first_name, surname, age, gender, postcode, longitu
 ('Barbara', 'Salister', 71, 'female', 'E3 5RF', -0.038538, 51.532131, '4 dogs', 'yes', 1, 'Double'),
 ('Edward', 'Jacobs', 74, 'male', 'E3 5DW', -0.038366, 51.530649, '2 cats', 'yes', 5, 'Single'),
 ('Allen', 'Walsh', 70, 'male', 'E3 5BS', -0.038066, 51.528086, 'none', 'no', 3, 'Single');
+('Marjorie', 'Bonham', 75, 'female', 'E3 2AA', -0.028908, 51.530230, '1 cat', 'no', 1, 'Double');
+('Boris', 'Johnstoned', 72, 'male', 'E3 2AD', -0.026636, 51.527098, '2 guinea pigs 1 rat 5 hamsters', 'yes', 2, 'Double');
+('Theresa', 'Mayde', 68, 'female', 'E3 2AN',  -0.023928, 51.527709, '1 owl', 'no', 3, 'Double');
 
 
 CREATE TABLE HomeownerPreferences (
