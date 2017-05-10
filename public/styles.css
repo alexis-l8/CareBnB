@@ -217,6 +217,8 @@ html, body {
   height: 75%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .detailedresults-text {
@@ -230,6 +232,23 @@ html, body {
 .detailedresults-text__article {
   border: 1px green solid;
   width: 33.33%;
+}
+
+.button__get-in-touch {
+  border: 0;
+  background-color: rgba(255, 64, 0, 0.8);
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 18px 20px 18px 20px;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
 }
 
 /* Registration Form */

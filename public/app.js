@@ -21,7 +21,7 @@ function initMap(err, res) {
   var userLng = res.result.longitude;
   var userCenter = {lat: userLat, lng: userLng};
   var mapOptions = {
-    zoom: 13,
+    zoom: 15,
     center: {
       lat: userLat,
       lng: userLng,
@@ -86,9 +86,9 @@ function addMarker (location, map, icon) {
 
 function createMap() {
   var params = new URLSearchParams(location.search.slice(1));
-  console.log(params);
+  console.log("params", params);
 
   var postcode = params.get('postcode').replace(' ', '%20');
-      console.log(postcode);
+      console.log("postcode", postcode);
   fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
 }
