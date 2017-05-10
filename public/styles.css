@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;first-name
+  box-sizing: border-box;
 }
 
 html, body {
@@ -281,4 +281,37 @@ background-color: #f5f4dc;
 
 h2 {
   text-align: center;
+}
+  .signup-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 600px;
+  height: 80%;
+  width: 50%;
+  margin: auto;
+}
+
+.signup-options__text{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+
+.signup-options__button{
+  text-align: center;
+  font-size: 2rem;
+  width: 60%;
+  margin: 1rem;
+}
+
+.signup-options__button--facebook{
+  width: 100%;
+}
+
+.signup-options__button:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
 }

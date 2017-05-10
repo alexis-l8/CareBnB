@@ -8,4 +8,8 @@ module.exports = [
   require('./detailedResults'),
   require('./registration'),
   require('./thankyou'),
+  require('./signup'),
+  require('./facebooklogin'),
+  require('./fileUpload'),
+  require('./sign-s3'),
 ];

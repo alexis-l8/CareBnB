@@ -1,0 +1,13 @@
+<h1>Upload Images</h1>
+<input type="file" id="file-input">
+<p id="status">Please select a file</p>
+<img id="preview" src="assets/default_profile.jpg" crossorigin="anonymous">
+
+<form method="POST" action="/save-details">
+  <input type="hidden" id="avatar-url" name="avatar-url" value="assets/default_profile.jpg">
+  <input type="text" name="username" placeholder="Username"><br>
+  <input type="text" name="full-name" placeholder="Full name"><br><br>
+  <input type="submit" value="Update profile">
+</form>
+
+<script src="./aws_s3.js"></script>
