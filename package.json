@@ -34,6 +34,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
+    "aws-sdk": "^2.49.0",
     "handlebars": "^4.0.8",
     "hapi": "^16.1.1",
     "hapi-auth-cookie": "^7.0.0",
