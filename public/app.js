@@ -16,7 +16,6 @@ var fetch = function(url, cb) {
 
 function initMap(err, res) {
   if (err) throw err;
-  console.log(res);
   var userLat= res.result.latitude;
   var userLng = res.result.longitude;
   var userCenter = {lat: userLat, lng: userLng};
@@ -37,7 +36,6 @@ function initMap(err, res) {
 function createMarkers(map, err, res){
   if(err) return new Error('No users');
   var locations = res.map(function(homeOwner){return [homeOwner.name, homeOwner.latitude, homeOwner.longitude]});
-  console.log(res);
   var marker;
 
   // ? WINDOW INFORMATION OBJECT
@@ -85,10 +83,10 @@ function addMarker (location, map, icon) {
 
 
 function createMap() {
-  var params = new URLSearchParams(location.search.slice(1));
-  console.log("params", params);
+  fetch('/postcode', function (err, res) {
+    if (err) throw err;
+    var postcode = res.postcode;
+    fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
+  })
 
-  var postcode = params.get('postcode').replace(' ', '%20');
-      console.log("postcode", postcode);
-  fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
 }
