@@ -9,8 +9,9 @@ module.exports = {
   handler: (request, reply) => {
     const params = {
       client_id: process.env.FACEBOOK_CLIENT_ID,
-      redirect_uri: `${process.env.BASE_URL}/welcome`,
+      redirect_uri: `${process.env.BASE_URL}/registration`,
     };
+    console.log(params.redirect_uri);
 
     const base = 'https://www.facebook.com/dialog/oauth?';
     const query = querystring.stringify(params);
