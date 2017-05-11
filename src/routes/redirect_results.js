@@ -4,6 +4,6 @@ module.exports = {
   handler: (request, reply) => {
     const { postcode, distance } = request.auth.credentials;
     request.cookieAuth.set({ submitted: true });
-    reply.redirect(`/results?distance=${distance}&postcode=${postcode}`);
+    reply.redirect('/results');
   },
 };
