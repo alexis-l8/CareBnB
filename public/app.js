@@ -20,7 +20,7 @@ function initMap(err, res) {
   var userLng = res.result.longitude;
   var userCenter = {lat: userLat, lng: userLng};
   var mapOptions = {
-    zoom: 13,
+    zoom: 15,
     center: {
       lat: userLat,
       lng: userLng,
@@ -88,4 +88,5 @@ function createMap() {
     var postcode = res.postcode;
     fetch('https://api.postcodes.io/postcodes/'+postcode, initMap);
   })
+
 }
