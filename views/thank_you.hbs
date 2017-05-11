@@ -1,0 +1,51 @@
+<article class="article__information">
+  <p class="information__text">
+    Thank you. We'll be sending your contact details.
+    <br/>
+    Feel free to write a message along with your profile details.
+  </p>
+</article>
+
+<section class="formspree">
+  <h1 class="formspree__title">Contact Us</h1>
+  <form class="formspree__form" action="https://formspree.io/alexislui@hotmail.co.uk" method="POST">
+
+      <label>
+        Name:
+        <br/>
+        <input class="formspree__input formspree__form--name" type="text" name="fullName" value="">
+      </label>
+
+      <label>
+        Email:
+        <br/>
+        <input class="formspree__input formspree__form--email" type="email" name="email" value="">
+      </label>
+
+      <label>
+        Message:
+        <br/>
+        <textarea class="formspree__input formspree__form--message" name="Comments" rows="6" cols="19" id="commentInput"></textarea>
+      </label>
+
+      <input class="formspree__input formspree__form--submit" type="submit" name="submitButton" value="Submit">
+      <input type="hidden" name="_next" value="/redirect_results" />
+      <!-- <input name="postcode" class="questionnaire__input" type="hidden" value=request.auth.credentials.postcode/>
+      <input name="distance" class="questionnaire__input" type="hidden" value=request.auth.credentials.postcode /> -->
+
+  </form>
+</section>
+
+<style>
+
+  html {
+    font-family: 'lato';
+  }
+
+  .formspree__form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+</style>

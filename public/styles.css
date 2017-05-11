@@ -1,0 +1,348 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+#map {
+        height: 90%;
+        width: 50%;
+        float: right;
+       }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+}
+
+.header__heading{
+  padding: 1rem;
+  color: rgb(50, 50, 50);
+}
+
+.header__account{
+  display: flex;
+  color: black;
+}
+
+.account__action{
+  padding: 1rem;
+}
+
+.section__information{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.section__housingoptions{
+  margin-top: 8em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.housingoptions__title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.housingoptions__text{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.article__housingoptions{
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 2rem;
+  max-width: 30%;
+  text-decoration: none;
+  color: black;
+}
+
+.article__housingoptions:hover, .article__housingoptions:focus{
+  transform: scale(1.1);
+  background-color:rgba(255, 64, 0, 0.7);
+  transition: 0.5s ease-in-out;
+}
+
+.section__homevideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.home__video{
+  border: 2px solid rgba(255, 64, 0, 0.7);
+  width: 80%;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section__questionnaire{
+  color: rgba(255, 64, 0, 1);
+  /*font-size: 1.5rem;*/
+}
+
+.questionnaire__form{
+  color: rgb(50, 50, 50);
+  margin-left: 5rem;
+
+
+}
+
+.questionnaire__section{
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+.questionnaire__current{
+  font-size: 50px;
+  color: white;
+  border: 1px solid rgba(255, 64, 0, 1);
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 64, 0, 0.8);
+}
+
+.questionnaire__total {
+  font-size: 30px;
+  padding-top: 0.7rem;
+}
+
+.questionnaire__article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.questionnaire_select{
+ font-size: 2.5rem;
+ color: white;
+ background-color: rgba(255, 64, 0, 0.8);
+ margin: 1rem;
+ padding: 0.5rem;
+}
+
+
+.questionnaire__button{
+  margin-top: 2rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(75, 75, 75)
+}
+
+.questionnaire__input{
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  width: 4em;
+  margin: 1rem;
+  vertical-align:middle;
+  background-color: rgba(255, 64, 0, 0.8);
+  color: white;
+}
+
+.aside__results{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 64, 0, 0.8);
+}
+
+.figure__homeowner{
+  max-width: 30%;
+  min-width: 150px;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1px solid rgba(255, 64, 0, 0.8);
+  border-radius: 1rem;
+  background-color: rgba(255, 64, 0, 0.6);
+
+}
+
+.homeowner__image{
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+}
+
+.googlemarker__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.detailedresults-images.markercontent{
+  height: 200px;
+  width: 300px;
+}
+
+.detailedresults-images__image{
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.detailedresults-images__button{
+  background-color:rgba(255, 64, 0, 0.8);
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 2rem;
+}
+
+/*slider*/
+.detailedresults-images {
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.detailedresults-text {
+  height: 75%;
+  width: 100%;
+  border: 3px black solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailedresults-text__article {
+  border: 1px green solid;
+  width: 33.33%;
+}
+
+.button__get-in-touch {
+  border: 0;
+  background-color: rgba(255, 64, 0, 0.8);
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 18px 20px 18px 20px;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
+}
+
+/* Registration Form */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 16px 40px 16px;
+  text-align: center;
+}
+
+.form-footer {
+  margin-top: 1em;
+}
+
+span, select, .user-input {
+  display: flex;
+  justify-content:flex-start;
+  margin-top: 0.5em;
+  color: rgb(50, 50, 50);
+}
+
+fieldset {
+border-width: medium;
+border-color: rgba(255, 64, 0, 0.6);
+border-radius: 3%;
+background-color: #f5f4dc;
+}
+
+.btn {
+  border: 0;
+  background-color: rgba(255, 64, 0, 0.8);
+  padding: 18px 30px 18px 30px;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
+}
+
+.btn:focus,.btn:active,
+.btn:hover {
+  background-color: #6EB1FF;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+}
+  .signup-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 600px;
+  height: 80%;
+  width: 50%;
+  margin: auto;
+}
+
+.signup-options__text{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+
+.signup-options__button{
+  text-align: center;
+  font-size: 2rem;
+  width: 60%;
+  margin: 1rem;
+}
+
+.signup-options__button--facebook{
+  width: 100%;
+}
+
+.signup-options__button:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+html {
+  font-family: 'lato';
+}
+
+.formspree__form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
