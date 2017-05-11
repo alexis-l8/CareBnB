@@ -23,7 +23,7 @@ server.register([inert, vision, CookieAuth], (err) => {
 const options = {
   password: 'datagangrulesokdatagangrulesokdatagangrulesok',
   cookie: 'carebnbcookie',
-  isSameSite: 'Lax',
+  isSameSite: false,
   isSecure: false,
   ttl: 3 * 60 * 10000,
 };
