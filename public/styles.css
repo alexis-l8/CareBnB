@@ -255,7 +255,7 @@ html, body {
 /* Registration Form */
 
 .container {
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
   padding: 20px 16px 40px 16px;
   text-align: center;
@@ -270,6 +270,16 @@ span, select, .user-input {
   justify-content:flex-start;
   margin-top: 0.5em;
   color: rgb(50, 50, 50);
+  font-weight: bold;
+}
+
+container {
+  background-color: #f5f4dc;
+}
+
+.new-account_form {
+  background-color: #FABB73;
+    border-radius: 5%;
 }
 
 fieldset {
@@ -279,17 +289,22 @@ border-radius: 3%;
 background-color: #f5f4dc;
 }
 
+fieldset:first-child {
+  margin-top: 3px;
+}
+
 .btn {
   border: 0;
   background-color: rgba(255, 64, 0, 0.8);
   padding: 18px 30px 18px 30px;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   text-transform: uppercase;
   letter-spacing: .0875em;
   font-weight: 500;
   border-radius: 100px;
   outline: 0;
+  width: 100%;
   transition: background-color $time $bezier,
               color $time $bezier;
 }
@@ -301,18 +316,23 @@ background-color: #f5f4dc;
 }
 
 h2 {
-  text-align: center;
+  text-align: center;;;;
+  color: rgba(255, 64, 0, 2);
 }
-  .signup-options {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 600px;
-  height: 80%;
-  width: 50%;
-  margin: auto;
+
+h3 {
+  text-align: center;;;;
+  color: white;
+  font-size: 1.8em;
+  background-color: rgba(255, 64, 0, 0.8);
+  padding: 5px 30px 5px 30px;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-bottom: 0;
 }
+
 
 .signup-options__text{
   text-align: center;
