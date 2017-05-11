@@ -6,14 +6,14 @@
   </section>
 
   <article class="questionnaire__article">
-  <span>I am looking for a room within<select class="questionnaire_select" name="distance">
+  <span>I am looking for a room within<select class="questionnaire_select" name="distance" required>
     <option value="" disabled selected>number</option>
     <option value=5>5</option>
     <option value=10>10</option>
     <option value=15>15+</option>
   </select>miles</span>
 
-  <span>from this postcode<input name="postcode" class="questionnaire__input" type="text"/></span>
+  <span>from this postcode<input name="postcode" class="questionnaire__input" type="text" required/></span>
 </article>
 
 <button class="questionnaire__button" type="submit" formaction="/seeker_step1" formmethod="get">Go Back</button>
