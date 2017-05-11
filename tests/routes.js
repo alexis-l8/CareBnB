@@ -37,10 +37,10 @@ test('homeseeker step2 route', (t) => {
 test('results route', (t) => {
   const options = {
     url: '/results',
-    method: 'GET',
+    method: 'POST',
   };
   server.inject(options, (res) => {
-    t.equal(res.statusCode, 200, 'statuscode should return 200');
+    t.equal(res.statusCode, 400, 'statuscode should return 400');
     t.end();
   });
 });

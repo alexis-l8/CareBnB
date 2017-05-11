@@ -13,4 +13,5 @@ module.exports = [
   require('./fileUpload'),
   require('./sign-s3'),
   require('./redirect_results'),
+  require('./postcode'),
 ];
