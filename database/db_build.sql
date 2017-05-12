@@ -38,16 +38,17 @@ CREATE TABLE HomeownerPreferences (
   shopping BOOLEAN,
   computer_assistance BOOLEAN,
   hours_needed INTEGER NOT NULL,
+  likes VARCHAR(100) NOT NULL,
   homeowner INTEGER REFERENCES HomeownerProfile(id)
 );
 
-INSERT INTO HomeownerPreferences(pets_allowed, smoking_allowed, gender, cooking, cleaning, shopping, computer_assistance, hours_needed, homeowner) VALUES
-('yes', 'no', 'male', 'yes', 'no', 'no', 'yes', 10, 1),
-('no', 'yes', 'female', 'no', 'yes', 'yes', 'no', 20, 2),
-('no', 'no', 'male', 'yes', 'no', 'yes', 'no', 5, 3),
-('yes', 'no', 'female', 'yes', 'no', 'yes', 'no', 5, 4),
-('yes', 'yes', 'either', 'no', 'yes', 'no', 'yes', 10, 5),
-('no', 'yes', 'either', 'no', 'yes', 'no', 'yes', 15, 6);
+INSERT INTO HomeownerPreferences(pets_allowed, smoking_allowed, gender, cooking, cleaning, shopping, computer_assistance, hours_needed, likes, homeowner) VALUES
+('yes', 'no', 'male', 'yes', 'no', 'no', 'yes', 10, 'Salsa dance with Martin', 1),
+('no', 'yes', 'female', 'no', 'yes', 'yes', 'no', 20, 'Have a nice meal besides the fire', 2),
+('no', 'no', 'male', 'yes', 'no', 'yes', 'no', 5,'Enjoys watching new films', 3),
+('yes', 'no', 'female', 'yes', 'no', 'yes', 'no', 5, 'Enjoys the company of young people', 4),
+('yes', 'yes', 'either', 'no', 'yes', 'no', 'yes', 10, 'Discipline young children', 5),
+('no', 'yes', 'either', 'no', 'yes', 'no', 'yes', 15, 'Stare outside the window', 6);
 
 
 

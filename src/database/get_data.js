@@ -16,4 +16,11 @@ dataFromDatabase.getHomeOwners = (cb) => {
   });
 };
 
+dataFromDatabase.getHomeOwnerPreferences = (homeOwnerId, cb) => {
+  db_connection.query(`SELECT * from homeownerpreferences INNER JOIN homeownerprofile ON homeownerpreferences.homeowner = homeownerprofile.id WHERE homeowner=${homeOwnerId}`, (err, res) => {
+    if (err) return cb(err);
+    return cb(null, res.rows);
+  });
+};
+
 module.exports = dataFromDatabase;
