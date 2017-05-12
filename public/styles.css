@@ -159,6 +159,8 @@ html, body {
 
 .aside__results{
   width: 50%;
+  height: 90%;
+  overflow: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -169,8 +171,9 @@ html, body {
 
 .figure__homeowner{
   max-width: 30%;
-  min-width: 200px;
-  margin:auto;
+  text-decoration: none;
+  min-width: 250px;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -319,7 +322,7 @@ h2 {
   color: rgba(255, 64, 0, 2);
 }
 
-h3 {
+.container h3 {
   text-align: center;;;;
   color: white;
   font-size: 1.8em;
@@ -333,6 +336,8 @@ h3 {
 }
 
 
+
+
 .signup-options__text{
   text-align: center;
   font-size: 2rem;
@@ -343,7 +348,8 @@ h3 {
 .signup-options__button{
   text-align: center;
   font-size: 2rem;
-  width: 60%;
+  display: block;
+  width: 100%;
   margin: 1rem;
 }
 
