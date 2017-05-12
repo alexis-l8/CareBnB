@@ -1,0 +1,13 @@
+<aside id="map_results" class="aside__results">
+  {{#each res}}
+  <a class="figure__homeowner" href="/detailedresults?homeowner={{inc @index}}">
+  <figure>
+    <img class="homeowner__image" src=http://d3n25ckpihzqv2.cloudfront.net/{{inc @index}}/00.jpg>
+    <span>{{this.first_name}}, {{this.surname}}</span>
+    <span>Age: {{this.age}}</span>
+    <span>Gender: {{this.gender}}</span>
+    <span>Postcode: {{this.postcode}}</span>
+  </figure>
+</a>
+{{/each}}
+</aside>

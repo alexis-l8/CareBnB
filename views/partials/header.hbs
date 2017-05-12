@@ -1,3 +1,11 @@
-<header>
-  <h1>CareBnB</h1>
+<header class="header">
+  <h1 class="header__heading">CareBnB</h1>
+  <section class="header__account">
+    {{#if data}}
+    <h3>Homeseeker: You are viewing {{data.first_name}}'s profile</h3>
+    {{else}}
+    <h3 class="account__action">Sign up</h3>
+    <h3 class="account__action">Log in</h3>
+    {{/if}}
+  </section>
 </header>
