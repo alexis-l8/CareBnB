@@ -15,22 +15,6 @@ module.exports = {
       ACL: 'public-read',
     };
 
-    // DELETE OBJECTS
-    // const delete_params = {
-    //   Bucket: S3_BUCKET,
-    //   Delete: { // required
-    //     Objects: [ // required
-    //       { Key: '4f9aa84c93e9279f0f5ae4185f0cee57.jpg',
-    //       },
-    //     ],
-    //   },
-    // };
-    //
-    // s3.deleteObjects(delete_params, (err, data) => {
-    //   if (err) console.log(err, err.stack); // an error occurred
-    //   else console.log(data);           // successful response
-    // });
-
 
     const list_params = { Bucket: S3_BUCKET };
     s3.listObjects(list_params, (err, data) => {
