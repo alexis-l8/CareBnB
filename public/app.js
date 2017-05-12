@@ -58,9 +58,11 @@ function createMarkers(map, err, res){
         marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
 
         }.bind(this, marker));
-
+        var initial = 1;
+        var img_src="http://d3n25ckpihzqv2.cloudfront.net/"+(index+1)+'/0'+(initial)+'.jpg';
+        console.log(document.getElementsByClassName('detailedresults-images__image'));
     google.maps.event.addListener(marker, 'click', (function (marker) {
-      infowindow.setContent('<section class="detailedresults-images markercontent"><button class="detailedresults-images__button" onclick="plusDivs(-1)">&#10094;</button><img class="detailedresults-images__image" src="./assets/fuggerei.jpg"/><img class="detailedresults-images__image" src="./assets/inside-the-hotel-property.jpg"/><img class="detailedresults-images__image" src="./assets/living-room-inside-property.jpg"/><button class="detailedresults-images__button" onclick="plusDivs(+1)">&#10095;</button></section>');
+      infowindow.setContent('<section class="detailedresults-images markercontent"><button class="detailedresults-images__button" onclick="plusDivs(-1)">&#10094;</button><img class="detailedresults-images__image" src='+"http://d3n25ckpihzqv2.cloudfront.net/"+(index+1)+"/0"+(initial)+".jpg"+'><img class="detailedresults-images__image" src='+"http://d3n25ckpihzqv2.cloudfront.net/"+(index+1)+"/0"+(initial+1)+".jpg"+'><img class="detailedresults-images__image" src='+"http://d3n25ckpihzqv2.cloudfront.net/"+(index+1)+"/0"+(initial+2)+".jpg"+'><button class="detailedresults-images__button" onclick="plusDivs(+1)">&#10095;</button></section>');
       infowindow.open(map, marker);
       showDivs(slideIndex);
 

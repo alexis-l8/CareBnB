@@ -8,7 +8,7 @@ CREATE TABLE HomeownerProfile (
   first_name VARCHAR(30) NOT NULL,
   surname VARCHAR(30) NOT NULL,
   age INTEGER NOT NULL,
-  gender VARCHAR(10) NOT NULL,
+  gender VARCHAR(15) NOT NULL,
   postcode VARCHAR(10) NOT NULL,
   longitude DOUBLE PRECISION NOT NULL,
   latitude DOUBLE PRECISION NOT NULL,
@@ -21,11 +21,11 @@ CREATE TABLE HomeownerProfile (
 
 INSERT INTO HomeownerProfile(first_name, surname, age, gender, postcode, longitude, latitude, pets, smoker, level_of_care, room_type) VALUES
 ('Barbara', 'Salister', 71, 'female', 'E3 5RF', -0.038538, 51.532131, '4 dogs', 'yes', 1, 'Double'),
-('Edward', 'Jacobs', 74, 'male', 'E3 5DW', -0.038366, 51.530649, '2 cats', 'yes', 5, 'Single'),
+('Jean', 'Adams', 74, 'female', 'E3 5DW', -0.038366, 51.530649, '2 cats', 'yes', 5, 'Single'),
 ('Allen', 'Walsh', 70, 'male', 'E3 5BS', -0.038066, 51.528086, 'none', 'no', 3, 'Single'),
-('Marjorie', 'Bonham', 75, 'female', 'E13 9HD', 0.029298, 51.527348, '1 cat', 'no', 1, 'Double'),
-('Boris', 'Johnstoned', 72, 'male', 'N1 0AA', -0.117931, 51.527098, '2 guinea pigs 1 rat 5 hamsters', 'yes', 2, 'Single'),
-('Theresa', 'Mayde', 68, 'female', 'N10 1DW',  -0.142960, 51.592203, '1 owl', 'no', 3, 'Double');
+('David', 'Gutenburg', 75, 'male', 'E13 9HD', 0.029298, 51.527348, '1 cat', 'no', 1, 'Double'),
+('Margaret', 'Bing', 72, 'female', 'N1 0AA', -0.117931, 51.527098, '2 guinea pigs 1 rat 5 hamsters', 'yes', 2, 'Single'),
+('Irene and John', 'Wicombe', 68, 'male & female', 'N10 1DW',  -0.142960, 51.592203, '1 owl', 'no', 3, 'Double');
 
 
 CREATE TABLE HomeownerPreferences (
