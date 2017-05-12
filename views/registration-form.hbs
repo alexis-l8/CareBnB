@@ -1,0 +1,100 @@
+<header class="header">
+  <h1 class="header__heading">CareBnB</h1>
+</header>
+
+<h2> Barb and many others are just one form away from you. Register today to be able to contact them.</h2>
+
+<div class="container" >
+  <h3>Create  new  account</h3>
+  <form class="new-account_form" method="POST" action="/thankyou">
+
+    <fieldset class="form-fieldset user-input __first-name">
+      <input type="text" name="first_name" required/>
+      <label for="First Name">
+        <span>FIRST NAME</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __surname" required>
+      <input type="text" name="surname" required/>
+      <label for="Surname">
+        <span>SURNAME</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __gender">
+        <label for="Gender">
+        <select class="gender_select" name="gender" required>
+          <option value="" disabled selected>Select</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+      </select>
+          <span>GENDER</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __dob">
+      <input type="date" name="date_of_birth" required/>
+      <label for="Date of Birth">
+        <span> DATE OF BIRTH</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __hours-available">
+      <input type="text" name="hours_available" required/>
+      <label for="Hours Available">
+        <span>HOURS AVAILABLE</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __occupation">
+      <input type="text" name="occupation" required />
+      <label for="Occupation">
+        <span>OCCUPATION</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __children">
+      <input type="text" name="children" required />
+      <label for="Children">
+        <span>CHILDREN</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __smoker">
+        <label for="Smoker">
+        <select class="smoker_select" name="smoker" required>
+          <option value="" disabled selected>Select</option>
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+      </select>
+          <span>SMOKER</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input __pets">
+      <input type="text" name="pets" required />
+      <label for="Pets">
+        <span>PETS</span>
+      </label>
+    </fieldset>
+
+    <fieldset class="form-fieldset user-input upload __ID">
+      <input name="upload-id" type="file" class="upload" />
+      <label for="Upload your ID">
+        <span>UPLOAD ID</span>
+      </label>
+  </fieldset>
+
+    <fieldset class="form-fieldset user-input upload __DBS">
+    <input name="upload-dbs" type="file" class="upload" />
+    <label for="Upload your DBS">
+      <span>UPLOAD DBS (if available)</span>
+    </label>
+  </fieldset>
+
+    <div class="form-footer">
+      <input type="submit" class="btn" value="Create Account" />
+    </div>
+  </form>
+</div>

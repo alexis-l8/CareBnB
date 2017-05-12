@@ -1,0 +1,28 @@
+{{>header}}
+<section class='detailedresults-images'>
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+
+  <img class="detailedresults-images__image" alt="Slider Image" height="95%"src="http://d3n25ckpihzqv2.cloudfront.net/{{data.id}}/01.jpg">
+  <img class="detailedresults-images__image" alt="Slider Image" height="95%" src="http://d3n25ckpihzqv2.cloudfront.net/{{data.id}}/02.jpg">
+  <img class="detailedresults-images__image" alt="Slider Image" height="95%" src="http://d3n25ckpihzqv2.cloudfront.net/{{data.id}}/03.jpg">
+
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <button type="button" class="button__get-in-touch" onclick="location.href='/signup'">Get in touch</button>
+</section>
+
+<section class='detailedresults-text'>
+  <article class="detailedresults-text__article">About
+    <span>Needs: {{data.hours_needed}} hours of help p/w with:</span>
+    <span>Age: {{data.age}}</span>
+    <span>Property Type: house</span>
+    <span>Room:</span>
+    <span>{{data.room_type}}</span>
+
+  </article>
+  <article class="detailedresults-text__article">Ground Rules</article>
+  <article class="detailedresults-text__article">Likes To
+    <p>{{data.likes}}</p>
+  </article>
+</section>
+
+<script src="./slider.js"></script>
