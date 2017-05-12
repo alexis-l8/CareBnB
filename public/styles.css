@@ -169,7 +169,7 @@ html, body {
 
 .figure__homeowner{
   max-width: 30%;
-  min-width: 150px;
+  min-width: 200px;
   margin:auto;
   display: flex;
   flex-direction: column;
@@ -200,9 +200,9 @@ html, body {
   width: 300px;
 }
 
-.detailedresults-images__image{
+a .detailedresults-images__image{
   border-radius: 1rem;
-  width: 80%;
+  width: 100%;
 }
 
 .detailedresults-images__button{
@@ -223,7 +223,6 @@ html, body {
 }
 
 .detailedresults-text {
-  height: 75%;
   width: 100%;
   border: 3px black solid;
   display: flex;

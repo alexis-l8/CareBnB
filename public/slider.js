@@ -1,5 +1,5 @@
-// SLIDER
-let slideIndex = 1;
+/* eslint-disable */
+var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
