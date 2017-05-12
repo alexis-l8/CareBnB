@@ -2,7 +2,7 @@
 ![travis](https://travis-ci.org/alexis-l8/CareBnB.svg?branch=staging)
 [![Code Coverage](https://codecov.io/gh/alexis-l8/CareBnB/branch/staging/graph/badge.svg)](https://codecov.io/gh/alexis-l8/CareBnB)
 
-Heroku: http://caarebnb.herokuapp.com/
+Heroku: http://carebnbfac.herokuapp.com/
 
 ## User story: 
 - As a young person living in London, I find accommodation ridiculously expensive and not good value for money. I want an app that allows me to search for cheaper accommodation in return of help around the house and good company.
